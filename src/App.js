@@ -9,15 +9,15 @@ const ViewHome = React.lazy(() =>
 
 function App() {
   return (
-    <AppLayout>
-      <BrowserRouter basename="/">
+    <BrowserRouter basename="/">
+      <AppLayout>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="*" element={<ViewHome />} />
           </Routes>
         </Suspense>
-      </BrowserRouter>
-    </AppLayout>
+      </AppLayout>
+    </BrowserRouter>
   );
 }
 

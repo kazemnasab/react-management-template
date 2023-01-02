@@ -1,5 +1,5 @@
 import React from 'react'
-import Language from './Language'
+import Actions from './Actions'
 import Notifications from './Notifications'
 import Profile from './Profile'
 import SearchIcon from './SearchIcon'
@@ -14,7 +14,7 @@ export default function TopNav() {
               <div className="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
                 <SearchIcon/>
                 <ul className="navbar-nav flex-row align-items-center ms-auto">
-                  <Language/>
+                  <Actions/>
                   <li className="nav-item me-2 me-xl-0">
                     <a className="nav-link style-switcher-toggle hide-arrow" >
                       <i className="bx bx-sm"></i>

@@ -8,10 +8,8 @@ export default function Profile() {
         data-bs-toggle="dropdown"
       >
         <div className="avatar avatar-online">
-          <img
-            src="assets/img/avatars/1.png"
-            alt="true"
-            className="rounded-circle"
+          <div
+            className="rounded-circle bx bx-user"
           />
         </div>
       </a>
@@ -24,10 +22,8 @@ export default function Profile() {
             <div className="d-flex">
               <div className="flex-shrink-0 me-3">
                 <div className="avatar avatar-online mt-1">
-                  <img
-                    src="assets/img/avatars/1.png"
-                    alt="true"
-                    className="rounded-circle"
+                  <div
+                    className="rounded-circle bx bx-user"
                   />
                 </div>
               </div>
