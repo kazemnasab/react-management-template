@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { Suspense, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import AppLayout from "./views/AppLayout";
+
+const ViewHome = React.lazy(() =>
+  import(/* webpackChunkName: "views-app" */ "./views")
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppLayout>
+      <BrowserRouter basename="/">
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="*" element={<ViewHome />} />
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+    </AppLayout>
   );
 }
 
