@@ -21,10 +21,11 @@ export const localeOptions = [
 
 export const currentUser = {
   id: 1,
-  title: 'محمد کاظم نسب',
+  name: 'محمد کاظم نسب',
   img: '/assets/img/profiles/l-1.jpg',
   date: 'آخرین بازدید امروز 15:24',
   role: UserRole.Admin,
+  roleTitle: 'UserRole.Admin',
   ApiToken: "",
 };
 

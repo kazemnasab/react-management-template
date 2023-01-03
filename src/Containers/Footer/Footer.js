@@ -1,7 +1,7 @@
 import React from "react";
 import { injectIntl } from "react-intl";
 
-const Footer = ({ intl }) => {
+const Index = ({ intl }) => {
   const { messages } = intl;
   return (
     <footer className="content-footer footer bg-footer-theme">
@@ -20,4 +20,4 @@ const Footer = ({ intl }) => {
   );
 };
 
-export default injectIntl(Footer);
+export default injectIntl(Index);

@@ -19,7 +19,7 @@ function Index() {
   return (
     <React.Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        {!currentUser && <Route path="/app/*" element={<AppHome />} />}
+        {currentUser && <Route path="/app/*" element={<AppHome />} />}
         {!currentUser && (
           <Route path="/*" element={<Navigate to="/user" replace />} />
         )}

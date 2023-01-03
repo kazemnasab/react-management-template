@@ -1,8 +1,14 @@
 import React from "react";
+import { injectIntl } from "react-intl";
 
-const Index = () => {
+const Index = ({ intl }) => {
+  const { messages } = intl;
   return (
     <>
+      <h4 className="py-3 breadcrumb-wrapper mb-4">
+        <span className="text-muted fw-light">{messages["app.home"]} /</span>{" "}
+        {messages["app.baker.home"]}
+      </h4>
       <div className="row">
         <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
           <div className="card">
@@ -341,4 +347,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default injectIntl(Index);

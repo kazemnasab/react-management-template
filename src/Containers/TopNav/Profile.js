@@ -1,6 +1,13 @@
 import React from "react";
+import { injectIntl } from "react-intl";
+import {getCurrentUser} from 'helpers/Utils'
 
-export default function Profile() {
+const Profile = ({ intl }) => {
+  const currentUser = getCurrentUser();
+  const { messages } = intl;
+  React.useEffect(() => {
+    console.log(currentUser);
+  }, []);
   return (
     <li className="nav-item navbar-dropdown dropdown-user dropdown">
       <a
@@ -8,9 +15,7 @@ export default function Profile() {
         data-bs-toggle="dropdown"
       >
         <div className="avatar avatar-online">
-          <div
-            className="rounded-circle bx bx-user"
-          />
+          <div className="rounded-circle bx bx-user" />
         </div>
       </a>
       <ul className="dropdown-menu dropdown-menu-end">
@@ -22,14 +27,12 @@ export default function Profile() {
             <div className="d-flex">
               <div className="flex-shrink-0 me-3">
                 <div className="avatar avatar-online mt-1">
-                  <div
-                    className="rounded-circle bx bx-user"
-                  />
+                  <div className="rounded-circle bx bx-user" />
                 </div>
               </div>
               <div className="flex-grow-1">
-                <span className="fw-semibold d-block">جان اسنو</span>
-                <small>مدیر</small>
+                <span className="fw-semibold d-block">{currentUser.name}</span>
+                <small>{currentUser.roleTitle}</small>
               </div>
             </div>
           </a>
@@ -93,8 +96,7 @@ export default function Profile() {
         <li>
           <a
             className="dropdown-item"
-            href="auth-login-cover.html"
-            target="_blank"
+            href="/user"
           >
             <i className="bx bx-power-off me-2"></i>
             <span className="align-middle">خروج</span>
@@ -103,4 +105,5 @@ export default function Profile() {
       </ul>
     </li>
   );
-}
+};
+export default injectIntl(Profile);

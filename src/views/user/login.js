@@ -1,7 +1,13 @@
 import React from "react";
-import Login from "../../Containers/Auth/Login.js";
+import Login from "Containers/Auth/Login.js";
+import { injectIntl } from "react-intl";
 
-export default function login() {
+const Index = ({ intl }) => {
+  const { messages } = intl;
+  React.useEffect(() => {
+    document.title = messages["app.name"];
+  }, []);
+
   return (
     <div className="authentication-wrapper authentication-cover">
       <div className="authentication-inner row m-0">
@@ -18,7 +24,7 @@ export default function login() {
             <div className="mx-auto">
               <h3>قدرتمندترین قالب مدیریت را کشف کنید</h3>
               <p>
-                کاملا مناسب برای هر سطح از توسعه‌دهندگان که به شما کمک می‌کند{" "}
+                کاملا مناسب برای هر سطح از گزارشات که به شما کمک می‌کند{" "}
                 <br />
                 تا پروژه و برنامه بزرگ بعدی خود را شروع کنید.
               </p>
@@ -30,3 +36,4 @@ export default function login() {
     </div>
   );
 }
+export default injectIntl(Index);

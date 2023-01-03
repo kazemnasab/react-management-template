@@ -6,6 +6,7 @@ import AppLocale from "./lang";
 import { defaultLocale } from "constants/defaultValues";
 import { configureStore } from "./redux/store";
 import { Provider } from 'react-redux';
+import { getCurrentUser } from "helpers/Utils";
 
 const ViewHome = React.lazy(() =>
   import(/* webpackChunkName: "views-app" */ "./views")
@@ -13,12 +14,15 @@ const ViewHome = React.lazy(() =>
 
 function App() {
   const currentAppLocale = AppLocale[defaultLocale];
+  const currentUser = getCurrentUser();
   return (
     <Provider store={configureStore()}>
       <Suspense fallback={<div className="loading" />}>
         <IntlProvider
           locale={defaultLocale}
           messages={currentAppLocale.messages}
+          test={'currentAppLocale.messages'}
+          currentUser={currentUser}
         >
           <BrowserRouter basename="/">
             <Suspense fallback={<div>Loading...</div>}>

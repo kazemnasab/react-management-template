@@ -1,26 +1,25 @@
-import React, { Suspense, useEffect } from "react";
-import {
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { setCurrentUser } from "helpers/Utils";
+import { injectIntl } from "react-intl";
 
 const Login = React.lazy(() =>
   import(/* webpackChunkName: "views-app" */ "./login")
 );
 
-
-function Index() {
-  setCurrentUser(null);
+const Index = ({ intl }) => {
+  const { messages, currentUser } = intl;
+  React.useEffect(() => {
+    setCurrentUser(null);
+  }, [currentUser]);
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <React.Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Navigate to="/user/login" replace />} />
       </Routes>
-    </Suspense>
+    </React.Suspense>
   );
-}
+};
 
-export default Index;
+export default injectIntl(Index);

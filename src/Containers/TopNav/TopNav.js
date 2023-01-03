@@ -5,8 +5,10 @@ import Profile from './Profile'
 import SearchIcon from './SearchIcon'
 import Shortcuts from './Shortcuts'
 import Search from './Search'
+import { injectIntl } from "react-intl";
 
-export default function TopNav() {
+const TopNav = ({ intl }) => {
+  const { messages } = intl;
   return (
     <nav className="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme" id="layout-navbar">
             <div className="container-fluid">
@@ -30,3 +32,4 @@ export default function TopNav() {
           </nav>
   )
 }
+export default injectIntl(TopNav);

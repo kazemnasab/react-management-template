@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { injectIntl } from "react-intl";
+import Card from "components/dashboard/Card";
 
-const Index = () => {
+const Index = ({ intl }) => {
+  const { messages } = intl;
   return (
     <>
       <h4 className="py-3 breadcrumb-wrapper mb-4">
-        <span className="text-muted fw-light">خانه /</span> مدیریت خیرات
+        <span className="text-muted fw-light">{messages["app.home"]} /</span>{" "}
+        {messages["app.donation.home"]}
       </h4>
       <div className="row">
         <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
@@ -98,90 +102,58 @@ const Index = () => {
 
       <div className="row">
         <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"></div>
-        <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
-          <Link to="/app/donation/new">
-            <div className="card">
-              <div className="card-body text-center">
-                <div className="avatar avatar-md mx-auto mb-3">
-                  <span className="avatar-initial rounded-circle bg-label-info">
-                    <i className="bx bx-edit fs-3"></i>
-                  </span>
-                </div>
-                <span className="d-block mb-1 text-nowrap">ثبت خیرین</span>
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
-          <div className="card">
-            <div className="card-body text-center">
-              <div className="avatar avatar-md mx-auto mb-3">
-                <span className="avatar-initial rounded-circle bg-label-primary">
-                  <i className="bx bx-cube fs-3"></i>
-                </span>
-              </div>
-              <span className="d-block mb-1 text-nowrap">مشاهده خیرات</span>
-            </div>
-          </div>
-        </div>
-        <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
-          <div className="card">
-            <div className="card-body text-center">
-              <div className="avatar avatar-md mx-auto mb-3">
-                <span className="avatar-initial rounded-circle bg-label-danger">
-                  <i className="bx bx-git-pull-request fs-3"></i>
-                </span>
-              </div>
-              <span className="d-block mb-1 text-nowrap">درخواست خیرات</span>
-            </div>
-          </div>
-        </div>
-        <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
-          <div className="card">
-            <div className="card-body text-center">
-              <div className="avatar avatar-md mx-auto mb-3">
-                <span className="avatar-initial rounded-circle bg-label-danger">
-                  <i className="bx bx-message-square-detail fs-3"></i>
-                </span>
-              </div>
-              <span className="d-block mb-1 text-nowrap">گزارش</span>
-            </div>
-          </div>
-        </div>
+        <Card
+          type="simple"
+          title="ثبت خیرین"
+          icon="bx bx-edit"
+          url="/app/donation/new"
+          className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"
+        />
+        <Card
+          type="simple"
+          title="مشاهده خیرات"
+          icon="bx bx-cube"
+          url="/app/donation/new"
+          className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"
+        />
+        <Card
+          type="simple"
+          title="درخواست خیرات"
+          icon="bx bx-git-pull-request"
+          url="/app/donation/new"
+          className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"
+        />
+        <Card
+          type="simple"
+          title="گزارش"
+          icon="bx bx-message-square-detail"
+          iconClass="bg-label-info"
+          url="/app/donation/new"
+          className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"
+        />
       </div>
       <div className="row">
-      <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
-        </div><div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
-        </div>
-        <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
-          <Link to="/donation/new">
-            <div className="card">
-              <div className="card-body text-center">
-                <div className="avatar avatar-md mx-auto mb-3">
-                  <span className="avatar-initial rounded-circle bg-label-info">
-                    <i className="bx bx-donate-heart fs-3"></i>
-                  </span>
-                </div>
-                <span className="d-block mb-1 text-nowrap">دریافت کمک</span>
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
-          <div className="card">
-            <div className="card-body text-center">
-              <div className="avatar avatar-md mx-auto mb-3">
-                <span className="avatar-initial rounded-circle bg-label-primary">
-                  <i className="bx bx-chart fs-3"></i>
-                </span>
-              </div>
-              <span className="d-block mb-1 text-nowrap">گزارش مالی</span>
-            </div>
-          </div>
-        </div>
+        <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"></div>
+        <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"></div>
+        <Card
+          type="simple"
+          title="دریافت کمک"
+          icon="bx bx-donate-heart"
+          iconClass="bg-label-info"
+          url="/app/donation/new"
+          className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"
+        />
+        <Card
+          type="simple"
+          title="گزارش مالی"
+          icon="bx bx-chart"
+          iconClass="bg-label-primary"
+          url="/app/donation/new"
+          className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"
+        />
       </div>
     </>
   );
 };
 
-export default Index;
+export default injectIntl(Index);
