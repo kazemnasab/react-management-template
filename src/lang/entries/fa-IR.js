@@ -4,6 +4,6 @@ const FaLang = {
   messages: {
     ...faMessages,
   },
-  locale: 'fa-IR',
+  locale: 'en',
 };
 export default FaLang;

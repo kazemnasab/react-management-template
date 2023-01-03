@@ -19,13 +19,11 @@ const AppLayout = ({ children, intl }) => {
               {children}
             </div>
             <Footer />
-
             <div className="content-backdrop fade"></div>
           </div>
         </div>
       </div>
       <div className="layout-overlay layout-menu-toggle"></div>
-
       <div className="drag-target"></div>
     </div>
   );

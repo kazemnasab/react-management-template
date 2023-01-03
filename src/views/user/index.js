@@ -4,6 +4,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import { setCurrentUser } from "helpers/Utils";
 
 const Login = React.lazy(() =>
   import(/* webpackChunkName: "views-app" */ "./login")
@@ -11,6 +12,7 @@ const Login = React.lazy(() =>
 
 
 function Index() {
+  setCurrentUser(null);
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
