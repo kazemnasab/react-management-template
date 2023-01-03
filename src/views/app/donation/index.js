@@ -20,7 +20,7 @@ function Index() {
         <Route path="/home" element={<ViewHome />} />
         <Route path="/new" element={<CreateOrUpdate />} />
         <Route path="/edit/:id" element={<CreateOrUpdate />} />
-        <Route path="/" element={<Navigate to="/baker/home" replace />} />
+        <Route path="/" element={<Navigate to="/app/donation/home" replace />} />
       </Routes>
     </Suspense>
   );

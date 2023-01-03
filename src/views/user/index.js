@@ -5,21 +5,17 @@ import {
   Navigate,
 } from "react-router-dom";
 
-
-const AppHome = React.lazy(() =>
-  import(/* webpackChunkName: "views-app" */ "./app/index")
-);
-
 const Login = React.lazy(() =>
-  import(/* webpackChunkName: "views-app" */ "./user/index")
+  import(/* webpackChunkName: "views-app" */ "./login")
 );
+
 
 function Index() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path="/app/*" element={<AppHome />} />
-        <Route path="/user/*" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Navigate to="/user/login" replace />} />
       </Routes>
     </Suspense>
   );

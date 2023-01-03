@@ -31,13 +31,13 @@ export default function Shortcuts() {
             <ShortcutCard
               title="برنامه خیرات"
               description="مدیریت خیرات"
-              url="/donation"
+              url="donation"
               iconClass="px-calendar"
             />
             <ShortcutCard
               title="برنامه خیرات نان"
               description="مدیریت خیرات نان"
-              url="/baker"
+              url="baker"
               iconClass="bx-food-menu"
             />
           </div>
@@ -45,13 +45,13 @@ export default function Shortcuts() {
             <ShortcutCard
               title="برنامه تنظیمات"
               description="مدیریت تنظیمات"
-              url="/donation"
+              url="donation"
               iconClass="px-cog "
             />
             <ShortcutCard
               title="برنامه رابطین"
               description="مدیریت رابطین"
-              url="/baker"
+              url="baker"
               iconClass="bx-food-menu"
             />
           </div>

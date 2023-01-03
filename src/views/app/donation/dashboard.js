@@ -99,7 +99,7 @@ const Index = () => {
       <div className="row">
         <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"></div>
         <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
-          <Link to="/donation/new">
+          <Link to="/app/donation/new">
             <div className="card">
               <div className="card-body text-center">
                 <div className="avatar avatar-md mx-auto mb-3">
