@@ -4,9 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-
+*.rar
 # testing
 /coverage
+/backup
 
 # production
 /build

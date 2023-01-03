@@ -5,8 +5,7 @@ const Index = () => {
   return (
     <>
       <h4 className="py-3 breadcrumb-wrapper mb-4">
-        <span className="text-muted fw-light">خانه /</span>{" "}
-        مدیریت خیرات
+        <span className="text-muted fw-light">خانه /</span> مدیریت خیرات
       </h4>
       <div className="row">
         <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
@@ -98,6 +97,7 @@ const Index = () => {
       </div>
 
       <div className="row">
+        <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4"></div>
         <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
           <Link to="/donation/new">
             <div className="card">
@@ -150,6 +150,9 @@ const Index = () => {
         </div>
       </div>
       <div className="row">
+      <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
+        </div><div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
+        </div>
         <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 mb-4">
           <Link to="/donation/new">
             <div className="card">
