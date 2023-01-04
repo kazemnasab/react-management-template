@@ -10,6 +10,10 @@ const Login = React.lazy(() =>
   import(/* webpackChunkName: "views-app" */ "./user/index")
 );
 
+const Print = React.lazy(() =>
+  import(/* webpackChunkName: "views-app" */ "./print/index")
+);
+
 function Index() {
   const currentUser = getCurrentUser();
   React.useEffect(() => {
@@ -24,6 +28,7 @@ function Index() {
           <Route path="/*" element={<Navigate to="/user" replace />} />
         )}
         <Route path="/user/*" element={<Login />} />
+        <Route path="/print/*" element={<Print />} />
       </Routes>
     </React.Suspense>
   );

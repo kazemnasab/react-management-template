@@ -68,8 +68,7 @@ const Index = ({ intl }) => {
   const [selectedOption, setSelectedOption] = React.useState(null);
   const [formState, setFormState] = React.useState(false);
   const { messages } = intl;
-  React.useEffect(() => {
-  }, []);
+  React.useEffect(() => {}, []);
   const [modal, setModal] = React.useState(false);
   const [unmountOnClose, setUnmountOnClose] = React.useState(true);
 
@@ -95,6 +94,13 @@ const Index = ({ intl }) => {
     return () => {};
   }, [formState]);
 
+  const print = () => {
+    window.open(
+      "/print/invoice/sale/12",
+      "winname",
+      "directories=no,titlebar=no,addressbar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=1000,height=800"
+    );
+  };
   return (
     <div>
       <h4 className="py-3 breadcrumb-wrapper">
@@ -127,13 +133,13 @@ const Index = ({ intl }) => {
               <Button onClick={toggle} color="success">
                 ذخیره تغییرات
               </Button>{" "}
-              <Button color="info">مشاهده</Button>{" "}
+              <Button onClick={print} color="info">مشاهده</Button>{" "}
               <Button color="warning">مشاهده خطا</Button>{" "}
               <Button color="dark">انصراف</Button>{" "}
               <Button color="danger">حذف</Button>{" "}
             </Colxx>
           </Row>
-          <Modal isOpen={modal} toggle={toggle} unmountOnClose={unmountOnClose} >
+          <Modal isOpen={modal} toggle={toggle} unmountOnClose={unmountOnClose}>
             <ModalHeader toggle={toggle}>Modal title</ModalHeader>
             <ModalBody>
               <Input

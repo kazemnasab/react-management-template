@@ -18,15 +18,15 @@ const selectStyles = {
 export default function SelectFloatingLabel({ options, defaultValue, value }) {
   return (
     <Select
-          textFieldProps={{
-            label: 'Label',
-            InputLabelProps: {
-              shrink: true,
-            },
-          }}
-          options={options}
-          components={<>Hekk</>}
-          value={value}
-        />
+      textFieldProps={{
+        label: "Label",
+        InputLabelProps: {
+          shrink: true,
+        },
+      }}
+      options={options}
+      components={<>Hekk</>}
+      value={value}
+    />
   );
 }
