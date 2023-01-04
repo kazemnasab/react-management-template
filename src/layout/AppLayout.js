@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "Containers/Footer/Footer";
-import TopNav from "Containers/TopNav/TopNav";
+import Footer from "containers/Footer/Footer";
+import TopNav from "containers/TopNav/TopNav";
 import { injectIntl } from "react-intl";
 
 const AppLayout = ({ children, intl }) => {

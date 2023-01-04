@@ -7,11 +7,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 const App = React.lazy(() => import(/* webpackChunkName: "App" */ "./App"));
 
 root.render(
-  <React.StrictMode>
+  //<React.StrictMode>
     <Suspense fallback={<div className="loading" />}>
       <App />
     </Suspense>
-  </React.StrictMode>
+ // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -13,19 +13,14 @@ const CreateOrUpdate = React.lazy(() =>
   import(/* webpackChunkName: "views-app" */ "./createOrUpdate")
 );
 
-const Agent = React.lazy(() =>
-  import(/* webpackChunkName: "views-app" */ "./agent")
-);
-
 function Index() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path="/agent/*" element={<Agent />} />
         <Route path="/home" element={<ViewHome />} />
         <Route path="/new" element={<CreateOrUpdate />} />
         <Route path="/edit/:id" element={<CreateOrUpdate />} />
-        <Route path="/" element={<Navigate to="/app/donation/home" replace />} />
+        <Route path="/" element={<Navigate to="/app/agent/home" replace />} />
       </Routes>
     </Suspense>
   );

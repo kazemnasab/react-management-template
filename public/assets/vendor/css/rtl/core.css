@@ -2146,6 +2146,7 @@ progress {
   margin-bottom: 0.25rem;
   font-size: 0.75rem;
   font-weight: 400;
+  width: 100%;
 }
 
 .col-form-label {

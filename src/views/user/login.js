@@ -1,5 +1,5 @@
 import React from "react";
-import Login from "Containers/Auth/Login.js";
+import Login from "containers/Auth/Login.js";
 import { injectIntl } from "react-intl";
 
 const Index = ({ intl }) => {

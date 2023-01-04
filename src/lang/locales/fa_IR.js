@@ -1,5 +1,6 @@
-module.exports = {
+const messages = {
   /* 01.General */
+  'sheet.saleservice.category':'شماره رسید',
   "app.name": "شبکه نان وفاق سبز علوی کشور",
   "general.copyright":
     "تمامی حقوق برای بنیاد خیریه وفاق سبز علوی کشور محفوظ است",
@@ -41,3 +42,6 @@ module.exports = {
   /* 05.App.Donation */
   "app.baker.home": "مدیریت شبکه سراسری نان",
 };
+
+
+export default messages;
