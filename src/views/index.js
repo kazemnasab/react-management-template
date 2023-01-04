@@ -6,7 +6,7 @@ const AppHome = React.lazy(() =>
   import(/* webpackChunkName: "views-app" */ "./app/index")
 );
 
-const Login = React.lazy(() =>
+const User = React.lazy(() =>
   import(/* webpackChunkName: "views-app" */ "./user/index")
 );
 
@@ -24,11 +24,9 @@ function Index() {
     <React.Suspense fallback={<div>Loading...</div>}>
       <Routes>
         {currentUser && <Route path="/app/*" element={<AppHome />} />}
-        {!currentUser && (
-          <Route path="/*" element={<Navigate to="/user" replace />} />
-        )}
-        <Route path="/user/*" element={<Login />} />
-        <Route path="/print/*" element={<Print />} />
+        {currentUser && <Route path="/print/*" element={<Print />} />}
+        <Route path="/*" element={<Navigate to="/user" replace />} />
+        <Route path="/user/*" element={<User />} />
       </Routes>
     </React.Suspense>
   );
