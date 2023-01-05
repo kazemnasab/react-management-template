@@ -5,8 +5,8 @@ import {
   Navigate,
 } from "react-router-dom";
 
-const ViewHome = React.lazy(() =>
-  import(/* webpackChunkName: "views-app" */ "./dashboard")
+const List = React.lazy(() =>
+  import(/* webpackChunkName: "views-app" */ "./list")
 );
 
 const CreateOrUpdate = React.lazy(() =>
@@ -17,10 +17,10 @@ function Index() {
   return (
     <React.Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path="/home" element={<ViewHome />} />
+        <Route path="/list" element={<List />} />
         <Route path="/new" element={<CreateOrUpdate />} />
         <Route path="/edit/:id" element={<CreateOrUpdate />} />
-        <Route path="/" element={<Navigate to="new" replace />} />
+        <Route path="/" element={<Navigate to="list" replace />} />
       </Routes>
     </React.Suspense>
   );
