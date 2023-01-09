@@ -1,7 +1,6 @@
 import { Colxx, Separator } from "components/bootstrap/CustomBootstrap";
 import IntlMessages from "helpers/IntlMessages";
 import React from "react";
-import Select from "react-select";
 import { injectIntl } from "react-intl";
 import {
   Row,
@@ -67,7 +66,7 @@ const Index = ({ intl }) => {
   const [selectedOption, setSelectedOption] = React.useState(null);
   const [formState, setFormState] = React.useState(false);
   const { messages } = intl;
-  React.useEffect(() => {}, []);
+  React.useEffect(() => { }, []);
   const [modal, setModal] = React.useState(false);
   const [unmountOnClose, setUnmountOnClose] = React.useState(true);
 
@@ -90,7 +89,7 @@ const Index = ({ intl }) => {
       };
     }
     // since this is not dirty, don't do anything
-    return () => {};
+    return () => { };
   }, [formState]);
 
   return (

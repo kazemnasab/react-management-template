@@ -1,7 +1,6 @@
 import { Colxx, Separator } from "components/bootstrap/CustomBootstrap";
 import IntlMessages from "helpers/IntlMessages";
 import React from "react";
-import Select from "react-select";
 import { injectIntl } from "react-intl";
 import {
   Row,
@@ -10,7 +9,6 @@ import {
   Input,
   Label,
   Button,
-  CloseButton,
   Modal,
   ModalHeader,
   ModalBody,
@@ -68,7 +66,7 @@ const Index = ({ intl }) => {
   const [selectedOption, setSelectedOption] = React.useState(null);
   const [formState, setFormState] = React.useState(false);
   const { messages } = intl;
-  React.useEffect(() => {}, []);
+  React.useEffect(() => { }, []);
   const [modal, setModal] = React.useState(false);
   const [unmountOnClose, setUnmountOnClose] = React.useState(true);
 
@@ -91,16 +89,9 @@ const Index = ({ intl }) => {
       };
     }
     // since this is not dirty, don't do anything
-    return () => {};
+    return () => { };
   }, [formState]);
 
-  const print = () => {
-    window.open(
-      "/print/invoice/sale/12",
-      "winname",
-      "directories=no,titlebar=no,addressbar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=1000,height=800"
-    );
-  };
   return (
     <div>
       <h4 className="py-3 breadcrumb-wrapper">
@@ -109,33 +100,15 @@ const Index = ({ intl }) => {
       </h4>
       <Card>
         <CardBody>
-          <Row>
-            <Colxx sm="6" md="6" lg="3">
-              <Label className="form-group has-float-label">
-                <span>
-                  <IntlMessages id="sheet.saleservice.category" />
-                </span>
-                <Select
-                  isMulti
-                  defaultValue={selectedOption}
-                  onChange={setSelectedOption}
-                  options={options}
-                />
-              </Label>
-            </Colxx>
-            <Colxx sm="6" md="6" lg="3">
-              <Label className="form-group has-float-label">
-                <span>
-                  <IntlMessages id="sheet.saleservice.category" />
-                </span>
-                <Input />
-              </Label>
-              <Button onClick={toggle} color="success">
-                ذخیره تغییرات
+          <Row className="mb-4">
+            <Colxx sm="12" md="12" lg="12">
+              <Button onClick={toggle} color="info">
+                جدید
               </Button>{" "}
-              <Button onClick={print} color="info">مشاهده</Button>{" "}
-              <Button color="warning">مشاهده خطا</Button>{" "}
-              <Button color="dark">انصراف</Button>{" "}
+              <Button onClick={toggle} color="info">
+                عملیات گروهی
+              </Button>{" "}
+              <Button color="dark">خروجی اکسل</Button>{" "}
               <Button color="danger">حذف</Button>{" "}
             </Colxx>
           </Row>
@@ -157,7 +130,7 @@ const Index = ({ intl }) => {
               </Button>
             </ModalFooter>
           </Modal>
-          <Box sx={{ height: 400, width: "100%" }}>
+          <Box sx={{ height: 500, width: "100%" }}>
             <DataGrid
               rows={rows}
               columns={columns}

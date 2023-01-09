@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { setCurrentUser } from "helpers/Utils";
 import { injectIntl } from "react-intl";
 
 const Invoice = React.lazy(() =>

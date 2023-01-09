@@ -1,13 +1,25 @@
 const messages = {
   /* 01.General */
   'sheet.saleservice.category':'شماره رسید',
-  "app.name": "شبکه نان وفاق سبز علوی کشور",
+  "app.name": "سامانه شبکه نان وفاق سبز",
   "general.copyright":
     "تمامی حقوق برای بنیاد خیریه وفاق سبز علوی کشور محفوظ است",
 
   "unauthorized.title": "تلاش دسترسی غیرمجاز",
   "unauthorized.detail":
     "شما مجاز به مشاهده صفحه موردنظر برای دسترسی به آن نیستید.",
+
+
+  /* Profile */
+  "profile.firstname":"نام",
+  "profile.lastname":"نام خانوادگی",
+  "profile.tel":"شماره ثابت",
+  "profile.mobile":"شماره همراه",
+  "profile.address":"آدرس پستی",
+  "profile.gender":"جنسیت",
+  "profile.gender.male":"مرد",
+  "profile.gender.female":"زن",  
+
 
   /* 02.User Login, Logout, Register */
   "user.login.name_or_mobile": "نام کاربری یا موبایل",
@@ -33,14 +45,25 @@ const messages = {
   Create: "ایجاد",
 
   /* 03.App */
-  "app.name": "اتوماسیون خیرات وفاق سبز",
   "app.home": "خانه",
 
   /* 04.App.Donation */
   "app.donation.home": "مدیریت خیرین",
-
+  "donation.fund.number":"کد حامی",
+  "donation.fund.rout":"شهر یا محله",
+  "donation.fund.create_or_update":"ثبت و ویرایش حامی",
+  "donation.fund.list":"گزارش حامی",
   /* 05.App.Donation */
   "app.baker.home": "مدیریت شبکه سراسری نان",
+
+  /* App.Setting */
+  "app.setting.home":"مدیریت تنظیمات",
+
+  /* App.Agent */
+  "app.agent.home":"صفحه مدیریت بازاریاب",
+
+  /* App.Interfaces */
+  "app.interface.home":"صفحه مدیریت رابط"
 };
 
 

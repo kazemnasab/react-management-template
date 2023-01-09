@@ -1,5 +1,5 @@
 import React from "react";
-import Login from "containers/Auth/Login.js";
+import Login from "containers/Auth/Login.js"
 import { injectIntl } from "react-intl";
 
 const Index = ({ intl }) => {
@@ -14,12 +14,12 @@ const Index = ({ intl }) => {
         <div className="d-none d-lg-flex col-lg-7 col-xl-8 align-items-center">
           <div className="flex-row text-center mx-auto">
             <img
-              src="../../assets/img/pages/login-light.png"
+              src="../../assets/img/pages/login1.png"
               alt="Auth Cover Bg color"
               width="520"
               className="img-fluid authentication-cover-img"
-              data-app-light-img="pages/login-light.png"
-              data-app-dark-img="pages/login-dark.png"
+              data-app-light-img="pages/login.png"
+              data-app-dark-img="pages/login.png"
             />
             <div className="mx-auto">
               <h3>قدرتمندترین قالب مدیریت را کشف کنید</h3>

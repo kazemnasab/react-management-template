@@ -37,7 +37,7 @@ export default function Shortcuts() {
             <ShortcutCard
               title="برنامه خیرات نان"
               description="مدیریت خیرات نان"
-              url="baker"
+              url="bread"
               iconClass="bx-food-menu"
             />
           </div>
@@ -45,13 +45,13 @@ export default function Shortcuts() {
             <ShortcutCard
               title="برنامه تنظیمات"
               description="مدیریت تنظیمات"
-              url="donation"
+              url="setting"
               iconClass="px-cog "
             />
             <ShortcutCard
-              title="برنامه رابطین"
-              description="مدیریت رابطین"
-              url="baker"
+              title="برنامه بازاریاب"
+              description="مدیریت بازاریاب"
+              url="agent"
               iconClass="bx-food-menu"
             />
           </div>
